@@ -15,7 +15,7 @@
     [super viewDidLoad];
 
     // create a new scene
-    SCNScene *scene = [SCNScene sceneNamed:@"art.scnassets/ship.dae"];
+    SCNScene *scene = [SCNScene scene];
 
     // create and add a camera to the scene
     SCNNode *cameraNode = [SCNNode node];
@@ -40,11 +40,37 @@
     [scene.rootNode addChildNode:ambientLightNode];
     
     // retrieve the ship node
-    SCNNode *ship = [scene.rootNode childNodeWithName:@"ship" recursively:YES];
-    
+    SCNText *HBDGeom = [SCNText textWithString:@"Happy Birthday!@#!@#" extrusionDepth:0.75];
+	HBDGeom.chamferRadius = 0.1;
+	
+	SCNNode* HBD = [SCNNode node];
+	HBD.geometry = HBDGeom;
+	HBD.geometry.firstMaterial.diffuse.contents = [UIColor yellowColor];
+	HBD.geometry.firstMaterial.specular.contents = [UIColor redColor];
+	HBD.geometry.firstMaterial.specular.intensity = 1.0;
+	HBD.geometry.firstMaterial.shininess = 10.0;
+	HBD.geometry.firstMaterial.doubleSided = YES;
+	
+	HBD.physicsBody = [SCNPhysicsBody bodyWithType:SCNPhysicsBodyTypeDynamic shape:[SCNPhysicsShape shapeWithGeometry:HBDGeom options:@{SCNPhysicsShapeTypeKey : SCNPhysicsShapeTypeConcavePolyhedron}]];
+	
+	// Particle system @!#
+	SCNParticleSystem* HBDParticles = [SCNParticleSystem particleSystemNamed:@"MyParticleSystem" inDirectory:nil];
+	HBDParticles.emitterShape = HBDGeom;
+	[HBD addParticleSystem:HBDParticles];
+	
+	// Physics Field
+	HBD.physicsField = [SCNPhysicsField noiseFieldWithSmoothness:1.0 animationSpeed:1.0];
+	HBD.physicsField.strength = 10;
+	
+//	[scene addParticleSystem:HBDParticles withTransform:SCNMatrix4Identity];
+	
+	
+	
     // animate the 3d object
-    [ship runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:2 z:0 duration:1]]];
-    
+    [HBD runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:2 z:0 duration:1]]];
+	
+	[scene.rootNode addChildNode:HBD];
+	
     // retrieve the SCNView
     SCNView *scnView = (SCNView *)self.view;
     

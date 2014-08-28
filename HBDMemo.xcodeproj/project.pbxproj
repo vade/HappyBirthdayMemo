@@ -14,6 +14,8 @@
 		1BE871C619AFA9B900C291AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE871C419AFA9B900C291AF /* Main.storyboard */; };
 		1BE871C819AFA9B900C291AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE871C719AFA9B900C291AF /* Images.xcassets */; };
 		1BE871D419AFA9B900C291AF /* HBDMemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE871D319AFA9B900C291AF /* HBDMemoTests.m */; };
+		1BE871E319AFB26F00C291AF /* MyParticleSystem.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 1BE871E119AFB26F00C291AF /* MyParticleSystem.scnp */; };
+		1BE871E419AFB26F00C291AF /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BE871E219AFB26F00C291AF /* confetti.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		1BE871CD19AFA9B900C291AF /* HBDMemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HBDMemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE871D219AFA9B900C291AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BE871D319AFA9B900C291AF /* HBDMemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBDMemoTests.m; sourceTree = "<group>"; };
+		1BE871E119AFB26F00C291AF /* MyParticleSystem.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = MyParticleSystem.scnp; path = HBDMemo/MyParticleSystem.scnp; sourceTree = "<group>"; };
+		1BE871E219AFB26F00C291AF /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = confetti.png; path = HBDMemo/confetti.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 		1BE871AC19AFA9B900C291AF = {
 			isa = PBXGroup;
 			children = (
+				1BE871E119AFB26F00C291AF /* MyParticleSystem.scnp */,
+				1BE871E219AFB26F00C291AF /* confetti.png */,
 				1BE871B719AFA9B900C291AF /* HBDMemo */,
 				1BE871D019AFA9B900C291AF /* HBDMemoTests */,
 				1BE871B619AFA9B900C291AF /* Products */,
@@ -199,9 +205,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE871E419AFB26F00C291AF /* confetti.png in Resources */,
 				1BE871C819AFA9B900C291AF /* Images.xcassets in Resources */,
 				1BE871C019AFA9B900C291AF /* art.scnassets in Resources */,
 				1BE871C619AFA9B900C291AF /* Main.storyboard in Resources */,
+				1BE871E319AFB26F00C291AF /* MyParticleSystem.scnp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
