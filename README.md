@@ -4,7 +4,7 @@ HappyBirthdayMemo
 Happy Birthday Memo
 
 
-![alt Image](https://t.co/BlNIXp83hf)
+![alt Image](https://pbs.twimg.com/media/BwJkf_zIIAI9mT4.png)
 
 iOS 8 Happy Birthday Demo.
 
