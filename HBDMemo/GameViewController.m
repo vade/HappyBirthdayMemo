@@ -59,8 +59,8 @@
 	[HBD addParticleSystem:HBDParticles];
 	
 	// Physics Field
-	HBD.physicsField = [SCNPhysicsField noiseFieldWithSmoothness:1.0 animationSpeed:1.0];
-	HBD.physicsField.strength = 10;
+	HBD.physicsField = [SCNPhysicsField noiseFieldWithSmoothness:0.1 animationSpeed:1.0];
+	HBD.physicsField.strength = 100;
 	
 //	[scene addParticleSystem:HBDParticles withTransform:SCNMatrix4Identity];
 	
